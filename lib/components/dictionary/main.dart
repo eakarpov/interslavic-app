@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:interslavic_app/components/dictionary/state.dart';
 
 class DictionaryPage extends StatelessWidget {
   const DictionaryPage({Key? key}) : super(key: key);
@@ -33,7 +34,19 @@ class DictionaryPage extends StatelessWidget {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      '/dictionary',
+                      '/components.dictionary',
+                    );
+                  },
+                ),
+              ),
+              ListTile(
+                leading: const Icon(Icons.domain),
+                title: TextButton(
+                  child: const Text('Main page'),
+                  onPressed: () {
+                    Navigator.pushNamed(
+                      context,
+                      '/',
                     );
                   },
                 ),
@@ -41,14 +54,7 @@ class DictionaryPage extends StatelessWidget {
             ]
         ),
       ),
-      body: Center(
-        child: TextButton(
-          child: const Text('Pop!'),
-          onPressed: () {
-            Navigator.pop(context);
-          },
-        ),
-      ),
+      body: DictionaryView()
     );
   }
 }

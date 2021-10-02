@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
-import 'dictionary/main.dart';
-import 'home.dart';
+import 'package:interslavic_app/components/dictionary/main.dart';
+import 'package:interslavic_app/components/home/main.dart';
 
 void main() {
   runApp(const MyApp());
@@ -23,7 +23,7 @@ class MyApp extends StatelessWidget {
       ),
       routes: {
         '/': (context) => const MyHomePage(),
-        '/dictionary': (context) => DictionaryPage(),
+        '/components.dictionary': (context) => DictionaryPage(),
       },
     );
   }

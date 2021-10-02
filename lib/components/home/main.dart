@@ -46,7 +46,7 @@ class _MyHomePageState extends State<MyHomePage> {
                   onPressed: () {
                     Navigator.pushNamed(
                       context,
-                      '/dictionary',
+                      '/components.dictionary',
                     );
                   },
                 ),
